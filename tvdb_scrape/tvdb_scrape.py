@@ -3,9 +3,15 @@ from bs4 import BeautifulSoup
 import pandas as pd
 import re
 from datetime import datetime
+from sys import argv, exit
 
 # URL of the webpage to scrape
-show_name = 'babylon-5'
+if len(argv) <= 1:
+    print("No show name supplied, exiting.")
+    exit()
+
+show_name = argv[1].strip().lower().replace(" ", "-")
+
 url = f'https://www.thetvdb.com/series/{show_name}/allseasons/official'
 
 def clean_str(string):
@@ -55,20 +61,18 @@ def gen_record(episode):
 
         filename = f'{clean_show_name} - {episode_code} - {clean_title}'
 
-        episode_record = pd.DataFrame(
-            data = [{
-                'Episode Code': episode_code,
-                'Air Date': air_date,
-                'Filename': filename,
-                'Season Number': season_num,
-                'Episode Number': episode_num,
-                'Title': title,
-                'Description':description,
-                'Image URL': image_url
-            }]
-        )
-
-        return episode_record
+        data = [{
+            'Episode Code': episode_code,
+            'Air Date': air_date,
+            'Filename': filename,
+            'Season Number': season_num,
+            'Episode Number': episode_num,
+            'Title': title,
+            'Description': description,
+            'Image URL': image_url
+        }]
+        
+        return pd.DataFrame(data = data)
 
 
 # Send a GET request to the URL
@@ -96,7 +100,7 @@ if response.status_code == 200:
         # print(f'Episode: {episode_code}, Title: {title}, Image: {image}')
 
 else:
-    print(f'Failed to retrieve the page. Status code: {response.status_code}')
+    print(f'Failed to retrieve the page for show \"{argv[1]}\". Status code: {response.status_code}')
 
 output_data = output_data.sort_values(['Season Number', 'Episode Number'])
 
