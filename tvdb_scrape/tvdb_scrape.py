@@ -6,7 +6,7 @@ from datetime import datetime
 from sys import argv, exit
 
 # URL of the webpage to scrape
-if len(argv) <= 1:
+if len(argv) < 2:
     print("No show name supplied, exiting.")
     exit()
 
@@ -15,7 +15,7 @@ show_name = argv[1].strip().lower().replace(" ", "-")
 url = f'https://www.thetvdb.com/series/{show_name}/allseasons/official'
 
 def clean_str(string):
-    return re.sub('[<>:\"/\\\|\?\*]', '', string)
+    return re.sub(r'[<>:"/\\|?*]', '', string)
 
 def gen_record(episode):
         try:
@@ -36,7 +36,7 @@ def gen_record(episode):
 
             episode_code = f'S{season_num:02}E{episode_num:02}'
 
-        except:
+        except ValueError:
             episode_code, season_num, episode_num = None, None, None
 
         try:
@@ -56,12 +56,12 @@ def gen_record(episode):
 
         try:
             image_url = episode.find('div', class_='col-xs-3').find('img')['data-src']
-        except:
+        except Exception:
             image_url = None
 
         filename = f'{clean_show_name} - {episode_code} - {clean_title}'
 
-        data = [{
+        data = {
             'Episode Code': episode_code,
             'Air Date': air_date,
             'Filename': filename,
@@ -70,9 +70,9 @@ def gen_record(episode):
             'Title': title,
             'Description': description,
             'Image URL': image_url
-        }]
+        }
         
-        return pd.DataFrame(data = data)
+        return data
 
 
 # Send a GET request to the URL
@@ -87,25 +87,25 @@ if response.status_code == 200:
     clean_show_name = clean_str(page_content.find("head").find("title").text.split("-")[0].strip())
 
     # Create output dataset
-    output_data = pd.DataFrame()
+    output_data = []
 
     episodes = page_content.find_all('li', class_='list-group-item')
 
     for episode in episodes:
 
-        episode_record = gen_record(episode)
-
-        output_data = pd.concat([output_data, episode_record], ignore_index=True)
+        output_data.append(gen_record(episode))
 
         # print(f'Episode: {episode_code}, Title: {title}, Image: {image}')
 
 else:
     print(f'Failed to retrieve the page for show \"{argv[1]}\". Status code: {response.status_code}')
+    exit()
 
-output_data = output_data.sort_values(['Season Number', 'Episode Number'])
+output_dataframe = pd.DataFrame(output_data)
+output_dataframe = output_dataframe.sort_values(['Season Number', 'Episode Number'])
 
 output_file_name = f'{show_name}.csv'
 
-output_data.to_csv(output_file_name, index=None)
+output_dataframe.to_csv(output_file_name, index=None)
 
-print(f'{len(output_data)} records output to {output_file_name}.')
+print(f'{len(output_dataframe)} records output to {output_file_name}.')
