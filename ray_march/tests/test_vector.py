@@ -10,32 +10,56 @@ class TestVec4(unittest.TestCase):
         self.assertEqual(v.z, 3)
         self.assertEqual(v.w, 4)
 
-    def test_equation(self):
-        self.assertEqual(Vec4(1, 2, 3, 4), Vec4(1, 2, 3, 4))
-
-    def test_addition(self):
+    def test_equality(self):
         v1 = Vec4(1, 2, 3, 4)
-        v2 = Vec4(4, 3, 2, 1)
-        v3 = v1 + v2
-        self.assertEqual(v3, Vec4(5, 5, 5, 5))
-
-    def test_subtraction(self):
-        v1 = Vec4(5, 6, 7, 8)
         v2 = Vec4(1, 2, 3, 4)
-        v3 = v1 - v2
-        self.assertEqual(v3, Vec4(4, 4, 4, 4))
+        v3 = Vec4(4, 3, 2, 1)
+        self.assertTrue(v1 == v2)
+        self.assertFalse(v1 == v3)
 
     def test_negation(self):
         v = Vec4(1, -2, 3, -4)
         self.assertEqual(-v, Vec4(-1, 2, -3, 4))
 
+    def test_addition(self):
+        v1 = Vec4(1, 2, 3, 4)
+        v2 = Vec4(4, 3, 2, 1)
+        self.assertEqual(v1 + v2, Vec4(5, 5, 5, 5))
+
+    def test_inplace_addition(self):
+        v1 = Vec4(1, 2, 3, 4)
+        v2 = Vec4(4, 3, 2, 1)
+        v1 += v2
+        self.assertEqual(v1, Vec4(5, 5, 5, 5))
+
+    def test_subtraction(self):
+        v1 = Vec4(1, 2, 3, 4)
+        v2 = Vec4(4, 3, 2, 1)
+        self.assertEqual(v1 - v2, Vec4(-3, -1, 1, 3))
+
+    def test_inplace_subtraction(self):
+        v1 = Vec4(1, 2, 3, 4)
+        v2 = Vec4(4, 3, 2, 1)
+        v1 -= v2
+        self.assertEqual(v1, Vec4(-3, -1, 1, 3))
+
     def test_multiplication(self):
         v = Vec4(1, 2, 3, 4)
         self.assertEqual(v * 2, Vec4(2, 4, 6, 8))
 
+    def test_inplace_multiplication(self):
+        v = Vec4(1, 2, 3, 4)
+        v *= 2
+        self.assertEqual(v, Vec4(2, 4, 6, 8))
+
     def test_division(self):
         v = Vec4(2, 4, 6, 8)
         self.assertEqual(v / 2, Vec4(1, 2, 3, 4))
+
+    def test_inplace_division(self):
+        v = Vec4(2, 4, 6, 8)
+        v /= 2
+        self.assertEqual(v, Vec4(1, 2, 3, 4))
 
     def test_dot_product(self):
         v1 = Vec4(1, 2, 3, 4)
@@ -53,7 +77,11 @@ class TestVec4(unittest.TestCase):
 
     def test_normalization(self):
         v = Vec4(1, 2, 2, 1)
-        self.assertAlmostEqual(v.norm().mag(), 1.0)
+        self.assertAlmostEqual(v.norm(), Vec4(
+            0.31622776601683794,
+            0.6324555320336759,
+            0.6324555320336759,
+            0.31622776601683794))
 
 if __name__ == '__main__':
     unittest.main()
