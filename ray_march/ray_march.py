@@ -14,15 +14,14 @@ camera_matrix = [
     [0.0, 0.0, -1.0, 2.0]
 ]
 
-print("Camera Transformation Matrix:")
-for row in camera_matrix:
-    print(row)
+width = 800
+height = 600
 
 root = Tk()
 root.title("Ray March")
 
 # canvas
-cnv = Canvas(root, width=800, height=600, bg="black")
+cnv = Canvas(root, width=width, height=height, bg="black")
 cnv.pack()
 
 
