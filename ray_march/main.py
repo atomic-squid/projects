@@ -47,6 +47,10 @@ def shade(distance, iter):
         intensity = 255 - int(min(distance / 1000, 1) * 255)
     return (max(iter, intensity), max(iter, 0), max(iter, intensity))
 
+# update surface
+for x, y in ((x + 1, y + 1) for x in range(screen_width) for y in range(screen_height)):
+    surface.set_at((x, y), shade(*raymarch(x, y)))
+
 # clock
 clock = pygame.time.Clock()
 
@@ -61,12 +65,6 @@ while running:
             running = False
 
     # clear screen
-    screen.fill("black")
-
-    # update surface
-    for x, y in ((x + 1, y + 1) for x in range(screen_width) for y in range(screen_height)):
-        surface.set_at((x, y), shade(*raymarch(x, y)))
-
     screen.blit(surface, (0, 0))
 
     # update display
