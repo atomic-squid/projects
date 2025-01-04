@@ -30,23 +30,23 @@ def raymarch(pos: vec4, dir: vec4, shapes):
     return (dist_traveled, i)
 
 # color based on distance
-def shade(distance, iter):
+def raymarch_shade(distance, iter):
     if distance is None:
         return (iter, iter, iter)
     else:
-        # intensity = 255 - int(min(distance / vp.yres, 1) * 255)
-        return (max(iter, 0), max(iter, 0), max(iter, 0))
+        intensity = 255 - int(min(distance / 2, 1) * 255)
+        return (max(iter, 0), max(iter, intensity), max(iter, 0))
 
 # shape in world space
-shapes = [Torus(vec4(0, x, 0), 0.5, 0.1) for x in (-0.3, 0.0, 0.3, 0.6)]
+shapes = [Torus(vec4(0, x, 0), 0.5, 0.1) for x in (-0.3, 0.0, 0.3)]
 
 
 # update surface
 # generalized camera is still not implemented so projections are orthographic
 start = datetime.now()
-dir = vec4(0, 1, 10).norm()
 for x, y in ((x + 1, y + 1) for x in range(viewport.xres) for y in range(viewport.yres)):
-    color = shade(*raymarch(vec4(*camera.get_screen_coord(x, y), -1), dir, shapes))
+    pos, dir = camera.viewport_to_screenspace(x, y)
+    color = raymarch_shade(*raymarch(pos, dir, shapes))
     surface.set_at((x, y), color)
 end = datetime.now()
 print(f"Render time: {end - start}")

@@ -25,6 +25,9 @@ class Viewport:
         return 0 < x <= self.xres and 0 < y <= self.yres
 
 class Camera:
+    # dummy direction
+    __dir = vec4(0.0, 1.00, 10.0).norm()
+
     def __init__(self,
                  viewport: Viewport = Viewport(),
                  pos: vec4 = vec4(),
@@ -51,15 +54,15 @@ class Camera:
     def fov(self):
         return self.__fov
     
-    def get_screen_coord(self, viewport_x, viewport_y):
+    def viewport_to_screenspace(self, viewport_x, viewport_y):
         """Transform a given coordiante to screen volume space"""
         scale = 2 / self.viewport.yres
         screen_x = viewport_x * scale - 1 * self.viewport.aspect
         screen_y = viewport_y * scale - 1
-        return (screen_x, screen_y)
+        return vec4(screen_x, screen_y, -1), Camera.__dir
     
 if __name__ == "__main__":
     cam = Camera(Viewport())
-    print(cam.get_screen_coord(1,1))
-    print(cam.get_screen_coord(400,300))
-    print(cam.get_screen_coord(800,600))
+    print(cam.viewport_to_screenspace(1,1))
+    print(cam.viewport_to_screenspace(400,300))
+    print(cam.viewport_to_screenspace(800,600))
