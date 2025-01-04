@@ -1,26 +1,29 @@
 import pygame
 from shapes import *
+from camera import *
+from datetime import datetime
 
 # init game engine
 pygame.init()
 
 #screen parameters
-screen_width = 800
-screen_height = 600
-screen = pygame.display.set_mode((screen_width, screen_height))
+viewport = Viewport(800, 600)
+camera = Camera(viewport)
+
+screen = pygame.display.set_mode((viewport.xres, viewport.yres))
 
 # surface object to hold rendering data
-surface = pygame.surface.Surface((screen_width, screen_height))
+surface = pygame.surface.Surface((viewport.xres, viewport.yres))
 
 # raymarch
-def raymarch(pos: vec4, dir: vec4, shape):
+def raymarch(pos: vec4, dir: vec4, shapes):
     point = pos
     dist_traveled = 0.0
     for i in range(256):
-        dist = shape.sdf(point)
-        if dist < 0.01:
+        dist = min(shape.sdf(point) for shape in shapes)
+        if dist < 0.001:
             break
-        if dist_traveled > 10000:
+        if dist_traveled > 1000:
             return (None, i)
         dist_traveled += dist
         point = pos + dir * dist_traveled
@@ -31,23 +34,22 @@ def shade(distance, iter):
     if distance is None:
         return (iter, iter, iter)
     else:
-        # intensity = 255 - int(min(distance / screen_height, 1) * 255)
-        return (
-            max(iter, 0),
-            max(iter, 0),
-            max(iter, 0))
+        # intensity = 255 - int(min(distance / vp.yres, 1) * 255)
+        return (max(iter, 0), max(iter, 0), max(iter, 0))
 
-# shape
-pos = vec4(screen_width // 2, screen_height // 2, screen_height // 2)
-# shape = Sphere(pos, 200)
-shape = Torus(pos, 200, 25)
+# shape in world space
+shapes = [Torus(vec4(0, x, 0), 0.5, 0.1) for x in (-0.3, 0.0, 0.3, 0.6)]
+
 
 # update surface
 # generalized camera is still not implemented so projections are orthographic
+start = datetime.now()
 dir = vec4(0, 1, 10).norm()
-for x, y in ((x + 1, y + 1) for x in range(screen_width) for y in range(screen_height)):
-    color = shade(*raymarch(vec4(x, y), dir, shape))
+for x, y in ((x + 1, y + 1) for x in range(viewport.xres) for y in range(viewport.yres)):
+    color = shade(*raymarch(vec4(*camera.get_screen_coord(x, y), -1), dir, shapes))
     surface.set_at((x, y), color)
+end = datetime.now()
+print(f"Render time: {end - start}")
 
 # output surface to image
 pygame.image.save(surface, "render.png")

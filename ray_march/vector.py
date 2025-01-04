@@ -1,11 +1,9 @@
 class vec4:
-    def __init__(self, x = 0.0, y = 0.0, z = 0.0, w = 0.0):
-        if not all(isinstance(val, (float, int)) for val in (x, y, z, w)):
-            raise ValueError("x, y, z, w values must all be of value float or integer")
-        self.__x = float(x)
-        self.__y = float(y)
-        self.__z = float(z)
-        self.__w = float(w)
+    def __init__(self, x: float = 0.0, y: float = 0.0, z: float = 0.0, w: float = 0.0):
+        self.__x = x
+        self.__y = y
+        self.__z = z
+        self.__w = w
 
     def __repr__(self):
         return f"vec4({self.__x}, {self.__y}, {self.__z}, {self.w})"

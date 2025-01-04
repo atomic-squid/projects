@@ -35,7 +35,7 @@ class Sphere(Shape):
 class Torus(Shape):
     def __init__(self, center: vec4, major_r: int = 0.0, minor_r: int = 0.0):
         for val in (major_r, minor_r):
-            assert isinstance(val, (float, int)), "value must be a float or integer value"
+            assert isinstance(val, (float, int)), "value must be a float or integer"
             assert val >= 0, "value cannot be negative"               
         super().__init__(center)
         self.__major_r = major_r
