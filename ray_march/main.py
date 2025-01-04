@@ -13,9 +13,8 @@ screen = pygame.display.set_mode((screen_width, screen_height))
 surface = pygame.surface.Surface((screen_width, screen_height))
 
 # raymarch
-def raymarch(x, y, shape):
-    # this version assumes we march straight down the z axis in a simple ortographic projection
-    point = Triplet(x, y, 0) # start at 0 on the z axis
+def raymarch(pos: vec4, dir: vec4, shape):
+    point = pos
     dist_traveled = 0.0
     for i in range(256):
         dist = shape.sdf(point)
@@ -24,24 +23,34 @@ def raymarch(x, y, shape):
         if dist_traveled > 10000:
             return (None, i)
         dist_traveled += dist
-        point = Triplet(point.x, point.y, dist_traveled)
+        point = pos + dir * dist_traveled
     return (dist_traveled, i)
 
 # color based on distance
 def shade(distance, iter):
     if distance is None:
-        intensity = 0
+        return (iter, iter, iter)
     else:
-        intensity = 255 - int(min(distance / 1000, 1) * 255)
-    return (max(iter, intensity), max(iter, 0), max(iter, intensity))
+        # intensity = 255 - int(min(distance / screen_height, 1) * 255)
+        return (
+            max(iter, 0),
+            max(iter, 0),
+            max(iter, 0))
 
-# sphere
-sphere = Sphere(Triplet(screen_width // 2, screen_height // 2, screen_height // 2), 200)
-print(sphere)
+# shape
+pos = vec4(screen_width // 2, screen_height // 2, screen_height // 2)
+# shape = Sphere(pos, 200)
+shape = Torus(pos, 200, 25)
 
 # update surface
+# generalized camera is still not implemented so projections are orthographic
+dir = vec4(0, 1, 10).norm()
 for x, y in ((x + 1, y + 1) for x in range(screen_width) for y in range(screen_height)):
-    surface.set_at((x, y), shade(*raymarch(x, y, sphere)))
+    color = shade(*raymarch(vec4(x, y), dir, shape))
+    surface.set_at((x, y), color)
+
+# output surface to image
+pygame.image.save(surface, "render.png")
 
 # clock
 clock = pygame.time.Clock()
