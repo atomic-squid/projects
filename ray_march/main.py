@@ -39,7 +39,7 @@ if __name__ == "__main__":
     pygame.init()
 
     #screen parameters
-    viewport = Viewport(800, 600)
+    viewport = Viewport(1280, 720)
     camera = Camera(viewport, vec4(0, 0, 4))
 
     screen = pygame.display.set_mode((viewport.xres, viewport.yres))
@@ -48,7 +48,7 @@ if __name__ == "__main__":
     surface = pygame.surface.Surface((viewport.xres, viewport.yres))
 
     # shape in world space
-    shapes = [Torus(vec4(0, x, 0), 0.5, 0.1) for x in (-0.3, 0.0, 0.3)]
+    shapes = [Torus(vec4(0, x, 0), 0.75, 0.1) for x in (-0.3, 0.0, 0.3)]
     for shape in shapes:
         print(shape)
 
