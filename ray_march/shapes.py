@@ -13,7 +13,7 @@ class Shape:
         return self.__center
 
 class Sphere(Shape):
-    def __init__(self, center: vec4, radius = 1.0):
+    def __init__(self, center: vec4, radius: float = 1.0):
         if not isinstance(radius, (float, int)):
             raise ValueError("radius must be a float or integer value")
         if radius < 0:
@@ -33,7 +33,10 @@ class Sphere(Shape):
         return self.center.mag(pos) - self.radius
 
 class Torus(Shape):
-    def __init__(self, center: vec4, major_r: int = 0.0, minor_r: int = 0.0):
+    def __init__(self,
+                 center: vec4,
+                 major_r: float = 0.0,
+                 minor_r: float = 0.0):
         for val in (major_r, minor_r):
             assert isinstance(val, (float, int)), "value must be a float or integer"
             assert val >= 0, "value cannot be negative"               

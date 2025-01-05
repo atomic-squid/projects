@@ -25,16 +25,15 @@ class Viewport:
         return 0 < x <= self.xres and 0 < y <= self.yres
 
 class Camera:
-    # dummy direction
-    __dir = vec4(0.0, 1.00, 10.0).norm()
+    # generalized camera is still not implemented so projection is simple
 
     def __init__(self,
                  viewport: Viewport = Viewport(),
-                 pos: vec4 = vec4(),
+                 position: vec4 = vec4(),
                  rot: vec4 = vec4(),
                  fov: float = 70):
         self.__viewport = viewport
-        self.__pos = pos
+        self.__position = position
         self.__rot = rot
         self.__fov = fov
 
@@ -43,8 +42,8 @@ class Camera:
         return self.__viewport
     
     @property
-    def pos(self):
-        return self.__pos
+    def position(self):
+        return self.__position
     
     @property
     def rot(self):
@@ -59,7 +58,9 @@ class Camera:
         scale = 2 / self.viewport.yres
         screen_x = viewport_x * scale - 1 * self.viewport.aspect
         screen_y = viewport_y * scale - 1
-        return vec4(screen_x, screen_y, -1), Camera.__dir
+        screen_pos = vec4(screen_x, screen_y, -1)
+        direction = (screen_pos - self.position).norm()
+        return screen_pos, direction
     
 if __name__ == "__main__":
     cam = Camera(Viewport())
