@@ -40,7 +40,7 @@ if __name__ == "__main__":
 
     #screen parameters
     viewport = Viewport(800, 600)
-    camera = Camera(viewport, vec4(0, 0, -4))
+    camera = Camera(viewport, vec4(0, 0, 4))
 
     screen = pygame.display.set_mode((viewport.xres, viewport.yres))
 

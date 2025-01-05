@@ -58,7 +58,7 @@ class Camera:
         scale = 2 / self.viewport.yres
         screen_x = viewport_x * scale - 1 * self.viewport.aspect
         screen_y = viewport_y * scale - 1
-        screen_pos = vec4(screen_x, screen_y, -1)
+        screen_pos = vec4(screen_x, screen_y, 1)
         direction = (screen_pos - self.position).norm()
         return screen_pos, direction
     
