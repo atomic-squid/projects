@@ -1,18 +1,43 @@
+from sys import argv, exit
+
+def help():
+    print("""
+Usage: python tvdb_scrape.py <flags> show-name
+
+Flags:
+    -h: This help message
+    -o: Official order (default)
+    -d: DVD Order
+    -a: Alternate order
+
+Example:
+    python tvdb_scrape.py -a animaniacs
+    """)
+
+# URL of the webpage to scrape
+if len(argv) < 2 or argv[1] == '-h':
+    help()
+    exit()
+elif len(argv) >= 3:
+    match argv[1]:
+        case '-o':
+            order = 'official'
+        case '-d':
+            order = 'dvd'
+        case '-a':
+            order = 'alternate'
+else:
+    order = 'official'
+
+show_name = argv[-1].strip().lower().replace(" ", "-")
+
 import requests
 from bs4 import BeautifulSoup
 import pandas as pd
 import re
 from datetime import datetime
-from sys import argv, exit
 
-# URL of the webpage to scrape
-if len(argv) < 2:
-    print("No show name supplied, exiting.")
-    exit()
-
-show_name = argv[1].strip().lower().replace(" ", "-")
-
-url = f'https://www.thetvdb.com/series/{show_name}/allseasons/official'
+url = f'https://www.thetvdb.com/series/{show_name}/allseasons/{order}'
 
 def clean_str(string):
     return re.sub(r'[<>:"/\\|?*]', '', string)
@@ -23,11 +48,11 @@ def gen_record(episode):
             episode_code = episode.find(['span','small'], class_='text-muted episode-label').text.strip()
 
             if 'SPECIAL' in episode_code.upper():
-                special_match = re.search('SPECIAL 0x(\d+)', episode_code, re.IGNORECASE)
+                special_match = re.search(r'SPECIAL 0x(\d+)', episode_code, re.IGNORECASE)
                 season_num = 0
                 episode_num = int(special_match[1]) if special_match else None
             else:
-                season_match = re.search('S(\d+)E(\d+)', episode_code, re.IGNORECASE)
+                season_match = re.search(r'S(\d+)E(\d+)', episode_code, re.IGNORECASE)
                 if season_match:
                     season_num = int(season_match[1])
                     episode_num = int(season_match[2])
@@ -49,10 +74,10 @@ def gen_record(episode):
 
         title = episode.find('a').text.strip()
 
-        clean_title = clean_str(title)
+        clean_title = clean_str(str(title).replace('/', '-'))
 
         description = episode.find('div', class_='col-xs-9').find('p').text.strip()
-        description = re.sub('[\n\r\s]+', ' ', description)
+        description = re.sub(r'[\n\r\s]+', ' ', description)
 
         try:
             image_url = episode.find('div', class_='col-xs-3').find('img')['data-src']
@@ -102,10 +127,17 @@ else:
     exit()
 
 output_dataframe = pd.DataFrame(output_data)
-output_dataframe = output_dataframe.sort_values(['Season Number', 'Episode Number'])
 
-output_file_name = f'{show_name}.csv'
+try:
+    output_dataframe = output_dataframe.sort_values(['Season Number', 'Episode Number'])
+except KeyError:
+    pass
 
-output_dataframe.to_csv(output_file_name, index=None)
+if not output_dataframe.empty:
+    output_file_name = f'{show_name}-{order}.csv'
 
-print(f'{len(output_dataframe)} records output to {output_file_name}.')
+    output_dataframe.to_csv(output_file_name, index=None)
+
+    print(f'{len(output_dataframe)} records output to {output_file_name}.')
+else:
+    print('No data to export. exiting.')
