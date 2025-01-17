@@ -39,7 +39,7 @@ if __name__ == "__main__":
     pygame.init()
 
     #screen parameters
-    viewport = Viewport(1280, 720)
+    viewport = Viewport(800, 600)
     camera = Camera(viewport, vec4(0, 0, 4))
 
     screen = pygame.display.set_mode(viewport.xy)
