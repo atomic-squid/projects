@@ -10,6 +10,10 @@ plex_token = config['PLEX_TOKEN']
 movie_index = config['MOVIE_INDEX']
 tv_index = config['TV_INDEX']
 
+def split_path(path: str):
+    folder, file = path.extract(r'(.*)\/([^\/]*)$', expand=True)
+    return (folder, file)
+
 # grab movies from Plex
 movies_collection = pd.read_xml(
     path_or_buffer = f'{plex_url}/library/sections/{movie_index}/all?X-Plex-Token={plex_token}',
@@ -19,7 +23,7 @@ movies_collection = pd.read_xml(
 )
 
 # split the full_path into folder and file
-movies_collection[['folder', 'file']] = movies_collection['full_path'].str.extract('(.*)\/([^\/]*)$', expand=True)
+movies_collection[['folder', 'file']] = split_path(movies_collection['full_path'].str)
 movies_collection = movies_collection.drop(columns=['full_path'])
 
 # grab tv shows from Plex
@@ -31,7 +35,7 @@ tv_collection = pd.read_xml(
 )
 
 # split the full_path into folder and file
-tv_collection[['folder', 'file']] = tv_collection['full_path'].str.extract('(.*)\/([^\/]*)$', expand=True)
+tv_collection[['folder', 'file']] = split_path(tv_collection['full_path'].str)
 tv_collection = tv_collection.drop(columns=['full_path'])
 
 # write to excel and csv
