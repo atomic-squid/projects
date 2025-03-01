@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build">
+  <Sdk Name="Microsoft.Build.Sql" Version="0.2.5-preview" />
+  <PropertyGroup>
+    <Name>DSP</Name>
+    <ProjectGuid>{E7191CF7-7EA7-464D-989B-AC9DEF622357}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql160DatabaseSchemaProvider</DSP>
+    <ModelCollation>1033, CI</ModelCollation>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include=".gitignore" />
+    <None Include="Data\accel.csv" />
+    <None Include="Data\input.csv" />
+    <None Include="Data\item.csv" />
+    <None Include="Data\item_class.csv" />
+    <None Include="Data\mfg.csv" />
+    <None Include="Data\mfg_class.csv" />
+    <None Include="Data\output.csv" />
+    <None Include="Data\recipe.csv" />
+    <None Include="Prod.publish.xml" />
+  </ItemGroup>
+  <Target Name="BeforeBuild">
+    <Delete Files="$(BaseIntermediateOutputPath)\project.assets.json" />
+  </Target>
+</Project>

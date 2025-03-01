@@ -1,0 +1,173 @@
+item_id,item_class_id,name
+790a5ea3-1e6e-4ae1-8ab3-01a173230d53,6f1e5d6a-7927-4e4f-90bc-46ae6ed36ab1,Gravity Matrix
+851d844d-665d-43c7-a1db-0520217763a4,e0eb6f59-64bd-46a7-a0a7-8d8610f8396b,Circuit Board
+ffc8938c-3717-46c5-bd3c-05caf61cbef7,e0eb6f59-64bd-46a7-a0a7-8d8610f8396b,Strange Matter
+c1a61f90-21cf-4f31-8a3b-07af1b65f598,e163b76e-a9b2-4966-9527-272d9457f898,Automatic Piler
+ad923865-d6aa-4b66-970c-07bdd9843430,78d3f040-df89-4c14-af87-4eee348a1cb8,Assembling Machine MK.I
+17a2dc10-8595-4070-a9c8-07f6fe4d67a6,a20ad36d-8fdc-4277-b534-c200b38bacfd,Missile Set
+c4852161-9316-4799-9ff5-0a27b5f666a5,7df70fc3-6864-41de-85f9-5390fceadae0,Vertical Launching Silo
+c871ea93-c6fc-424a-b966-0a484edf7a24,0fd7db71-83fd-41c0-8f58-402004477898,Thruster
+92446ad6-ee31-45a9-9ea1-0cc1fb8dbf4a,0c90e340-e71d-4d53-a291-5d3cc861fb51,Accumulator
+01c97963-4c01-420e-937d-0e1b387a5af3,334940a7-5770-400a-8d26-14bacc9ce74a,Corvette
+b1ba37cf-74fc-4fb8-968d-0ebff3bfe636,e0eb6f59-64bd-46a7-a0a7-8d8610f8396b,Prism
+9f31ec38-fc74-4818-8e63-10708587a99f,78d3f040-df89-4c14-af87-4eee348a1cb8,Oil Refinery
+454b753b-cde0-4a2a-b177-10afc672db01,78d3f040-df89-4c14-af87-4eee348a1cb8,Assembling Machine MK.II
+01b4b4f9-ddb2-4897-bd6a-1196f2333bce,b0303440-0a91-49b6-9dbf-1d5597bfd196,Implosion Cannon
+672f362d-a1d4-4dc1-b209-142abd70c04b,cf71aa35-93d4-47a9-bc77-d3ea2adb564e,Stalagmite Crystal
+9ab1edc9-5b5c-4fe7-ad7f-14c4bb3eec1c,e163b76e-a9b2-4966-9527-272d9457f898,Sorter MK.II
+b07b2f1d-3bd7-486d-b507-14e6ebf532e3,78d3f040-df89-4c14-af87-4eee348a1cb8,Plane Smelter
+a5039560-fec2-4aaf-8a56-158a4f95db45,7df70fc3-6864-41de-85f9-5390fceadae0,Matrix Lab
+bac11ce9-7fe4-4cb1-a16b-18040d3e0c3a,78d3f040-df89-4c14-af87-4eee348a1cb8,Quantum Chemical Plant
+473a4159-6e7f-41e2-ab58-18081f5bcba0,334940a7-5770-400a-8d26-14bacc9ce74a,Precision Drone
+264c3a0b-c60d-4947-9406-193d5e09123f,e0eb6f59-64bd-46a7-a0a7-8d8610f8396b,Graviton Lens
+4ea164d2-5ff9-42d8-b1a9-195e66d6b541,e163b76e-a9b2-4966-9527-272d9457f898,Conveyor Belt MK.I
+e56e407e-4274-41ab-a553-1a8f2d1db525,e0eb6f59-64bd-46a7-a0a7-8d8610f8396b,Electromagnetic Turbine
+7a72aa5f-92f0-4f6a-8e48-1abe5c1f6850,e0eb6f59-64bd-46a7-a0a7-8d8610f8396b,Crystal Silicon
+f731bca9-1bc7-4d45-8436-1b1565282fa4,a20ad36d-8fdc-4277-b534-c200b38bacfd,Shell Set
+56efb773-dc1e-48e7-8c49-2075aa54b953,0c90e340-e71d-4d53-a291-5d3cc861fb51,Mini Fusion Power Plant
+8b85557c-ab90-4a96-b472-226eddb443a6,cf71aa35-93d4-47a9-bc77-d3ea2adb564e,Unipolar Magnet
+88081acc-f356-46a3-943f-25826c94bfa3,b0303440-0a91-49b6-9dbf-1d5597bfd196,Jammer Tower
+49c8f229-3492-43d6-92ba-26a05cffaf8b,cf71aa35-93d4-47a9-bc77-d3ea2adb564e,Water
+4d941e6a-ba1f-4237-8429-27c0bda34909,e0eb6f59-64bd-46a7-a0a7-8d8610f8396b,Frame Material
+7449d1a0-247a-4be4-a747-283bfddee9f3,a20ad36d-8fdc-4277-b534-c200b38bacfd,Supersonic Missile Set
+aae96e84-ea54-408b-b6df-29b79454a04b,0c90e340-e71d-4d53-a291-5d3cc861fb51,Energy Exchanger
+b168631e-0f97-4f35-8fe8-29c19d51915d,b0303440-0a91-49b6-9dbf-1d5597bfd196,Battlefield Analyisis Base
+94cc04ea-d7c0-4710-9515-2f89336c6a13,e0eb6f59-64bd-46a7-a0a7-8d8610f8396b,Super-Magnetic Ring
+6a2a31b2-dc71-4662-90f8-30f1c02742db,78d3f040-df89-4c14-af87-4eee348a1cb8,Fractionator
+ecebd59d-d5a7-4e8d-91f0-319b16f641b7,e163b76e-a9b2-4966-9527-272d9457f898,Sorter MK.I
+72cb4e75-67a8-43ea-9983-32be914d3a1d,e0eb6f59-64bd-46a7-a0a7-8d8610f8396b,Diamond
+b66a27fb-0b09-446a-8429-345cd71b0597,dbbb2c6e-635d-4bee-9a8a-c81332bac6d6,Strange Anniliation Fuel Rod
+a9fbe6ff-37fc-4433-be60-34e4154ee85c,0c90e340-e71d-4d53-a291-5d3cc861fb51,Tesla Tower
+d1c71f9c-a26e-4a18-afdd-34e70a90d895,ced2ea2d-7dd4-4c35-9084-1131d8418e5a,Proliferator MK.I
+0ebca1c3-4ee5-4f36-a7b5-353ab9b3c0ce,a20ad36d-8fdc-4277-b534-c200b38bacfd,Magnum Ammo Box
+4bbc87f7-a025-4741-947f-375d53d75031,e0eb6f59-64bd-46a7-a0a7-8d8610f8396b,Deuterium
+edc4be2b-5bb7-4cce-b01d-38247ff0fdb0,b0303440-0a91-49b6-9dbf-1d5597bfd196,Laser Turret
+f2de9444-0347-4c09-a077-39095e5b7d66,b1a56ed0-d8b5-4c6b-b4ec-8337cfdb7851,Combustible Unit
+2ecbc6f2-fcab-495a-9993-3d13a5b74ce6,a20ad36d-8fdc-4277-b534-c200b38bacfd,Jamming Capsule
+951b070f-e068-4160-b4ea-3ded2f48ee01,e163b76e-a9b2-4966-9527-272d9457f898,Spray Coater
+1c902da4-c3dc-4344-9346-3e38d6831423,cf71aa35-93d4-47a9-bc77-d3ea2adb564e,Hydrogen
+88e61c5f-c9ac-4745-9f6d-3fb63a58dea8,78d3f040-df89-4c14-af87-4eee348a1cb8,Negentropy Smelter
+1c7aac42-cecc-4fe4-8204-421fc39dc6c0,b0303440-0a91-49b6-9dbf-1d5597bfd196,Missile Turret
+e761c6ea-0346-4f97-ad8b-42986696d7ce,dbbb2c6e-635d-4bee-9a8a-c81332bac6d6,Antimatter Fuel Rod
+1635b322-0711-4d61-a0cd-4320e07b9c6f,cdbcfd5e-2ed3-4028-a4b5-5ce1c559e011,Logistics Distributor
+f619ba41-ad92-47ca-bbbf-45434e7884ae,cf71aa35-93d4-47a9-bc77-d3ea2adb564e,Grating Crystal
+1a11b273-568f-4c73-84ff-4550dab72e25,e0eb6f59-64bd-46a7-a0a7-8d8610f8396b,Microcrystiline Component
+65070b51-e43c-4b7e-8233-459600df1a4f,cf71aa35-93d4-47a9-bc77-d3ea2adb564e,Titanium Ore
+bed839ae-4220-4928-b9f8-4663036afc8a,78d3f040-df89-4c14-af87-4eee348a1cb8,Chemical Plant
+9f06b031-85cd-45d1-9b7b-46b382d63f9a,0fd7db71-83fd-41c0-8f58-402004477898,Engine
+b97fd052-5166-4f11-ac42-48703d3d59f6,e0eb6f59-64bd-46a7-a0a7-8d8610f8396b,Magnet
+b027059f-641b-4b29-ab51-4c14f451b822,cdbcfd5e-2ed3-4028-a4b5-5ce1c559e011,Orbital Collector
+3a2d3b4d-1647-4b94-a505-4ddbc912d619,0c90e340-e71d-4d53-a291-5d3cc861fb51,Artificial Star
+058997ea-a52a-4118-8ac3-51c8aeec2bb1,cf71aa35-93d4-47a9-bc77-d3ea2adb564e,Plant Fuel
+aae529c5-b2b8-4da0-937e-51ee4bfda549,e0eb6f59-64bd-46a7-a0a7-8d8610f8396b,Titanium Ingot
+2786ff93-c583-46eb-b512-5467f64f5087,e0eb6f59-64bd-46a7-a0a7-8d8610f8396b,Gear
+3658af33-8c8d-4e46-a8fe-54b1fe68b6ea,b0303440-0a91-49b6-9dbf-1d5597bfd196,Signal Tower
+ce2f1343-ab65-4921-89dd-5755027a3f3b,dbbb2c6e-635d-4bee-9a8a-c81332bac6d6,Deuteron Fuel Rod
+aadbf045-5c7f-4dc4-9dc3-577a6660fb98,e0eb6f59-64bd-46a7-a0a7-8d8610f8396b,Dyson Sphere Component
+d8e0967d-5e67-4830-a48a-57d3045def84,0c90e340-e71d-4d53-a291-5d3cc861fb51,Solar Panel
+012ec409-cb79-4b9e-880d-5889652bb91d,e163b76e-a9b2-4966-9527-272d9457f898,Depot MK.II
+608e1e77-f190-4a62-8d48-58ca8ab14a25,cdbcfd5e-2ed3-4028-a4b5-5ce1c559e011,Interstellar Logistics Vessel
+8b44aead-055f-48b2-855d-59d7e7993a53,e0eb6f59-64bd-46a7-a0a7-8d8610f8396b,Organic Crystal
+f1884be6-0a1e-46e4-829c-5abaaac5107b,e163b76e-a9b2-4966-9527-272d9457f898,Depot MK.I
+72aa5a70-d7eb-4fbc-aa57-5c1f7ed3a570,e0eb6f59-64bd-46a7-a0a7-8d8610f8396b,Steel
+6cd9a207-ffa4-4c33-a839-65ef7c1af70e,e0eb6f59-64bd-46a7-a0a7-8d8610f8396b,Fire Ice
+a1530e75-fdb4-4fd6-9f04-6b658d223981,ced2ea2d-7dd4-4c35-9084-1131d8418e5a,Proliferator MK.III
+666a90d9-a71a-41ee-8aa1-6d05dea8b450,e0eb6f59-64bd-46a7-a0a7-8d8610f8396b,Electric Motor
+bd889b14-c1be-432d-9761-6ec6bd138c22,78d3f040-df89-4c14-af87-4eee348a1cb8,Assembling Machine MK.III
+e528abd5-f5ba-4c2a-8f93-6efca57a58b8,e0eb6f59-64bd-46a7-a0a7-8d8610f8396b,Titanium Alloy
+04dc63c2-cf97-489f-8591-726e449b713d,e0eb6f59-64bd-46a7-a0a7-8d8610f8396b,Particle Broadband
+73800c5f-58ef-4ecd-b49b-73efd6fc832f,cf71aa35-93d4-47a9-bc77-d3ea2adb564e,Copper Ore
+51bec4b1-fae4-4ca0-ad8f-741827dd31f2,7df70fc3-6864-41de-85f9-5390fceadae0,Self-evolution Lab
+1fb47005-d572-4686-a945-74b071dd76b8,40eaf439-f9c7-4aa7-8cf3-1e5f48951f8f,Oil Extractor
+6fa9c753-3955-40f0-96f4-76c704283227,b0303440-0a91-49b6-9dbf-1d5597bfd196,Gauss Turret
+d537b536-f414-41d2-9108-82234836b3fa,78d3f040-df89-4c14-af87-4eee348a1cb8,Miniature Particle Collider
+efb8a06d-934b-4566-a660-82b65da4329b,cdbcfd5e-2ed3-4028-a4b5-5ce1c559e011,Interstellar Logistics Station
+340c88ad-24ad-456e-abff-82ccf34d08e6,0c90e340-e71d-4d53-a291-5d3cc861fb51,Thermal Power Plant
+9fd95543-7c3e-4e30-bd64-83a897ae8404,cdbcfd5e-2ed3-4028-a4b5-5ce1c559e011,Planetary Logistics Station
+919ea281-2cd0-4bc4-86d4-84eb96bceaec,b1a56ed0-d8b5-4c6b-b4ec-8337cfdb7851,Explosive Unit
+0a650b26-3535-494c-9f95-84fee8f62750,e0eb6f59-64bd-46a7-a0a7-8d8610f8396b,Foundation
+64776bc6-7181-4b67-80f2-86c682fdfa6c,e163b76e-a9b2-4966-9527-272d9457f898,Storage Tank
+f31478e4-42fd-435d-a566-8879062e370f,e0eb6f59-64bd-46a7-a0a7-8d8610f8396b,Carbon Nanotube
+a4691cce-4e3b-49d4-83fb-88b741323185,e0eb6f59-64bd-46a7-a0a7-8d8610f8396b,Magnetic Coil
+51483eef-9679-4f13-ae67-88b7bcece2ed,6f1e5d6a-7927-4e4f-90bc-46ae6ed36ab1,Energy Matrix
+0c0cdb01-7de5-4073-b84c-8978290464bd,6f1e5d6a-7927-4e4f-90bc-46ae6ed36ab1,Universe Matrix
+9493acaa-7599-4322-8eea-8aacbd8708a3,0fd7db71-83fd-41c0-8f58-402004477898,Reinforced Thruster
+a83c0816-f2db-432b-b538-8fbee3baea43,e0eb6f59-64bd-46a7-a0a7-8d8610f8396b,Photon Combiner
+231b5122-2da1-4b69-9104-901c1bd067a8,e0eb6f59-64bd-46a7-a0a7-8d8610f8396b,Casimir Crystal
+45f80987-261b-477d-8b0b-902d4d37674c,40eaf439-f9c7-4aa7-8cf3-1e5f48951f8f,Water Pump
+95d1aa6a-6a34-424a-ad4a-90bd10b9428e,78d3f040-df89-4c14-af87-4eee348a1cb8,Arc Smelter
+a0222822-e326-465b-af48-91d9597d1f28,cf71aa35-93d4-47a9-bc77-d3ea2adb564e,Fractal Silicon
+36414df4-a4bf-4b8c-9743-9232a1cc91e7,e0eb6f59-64bd-46a7-a0a7-8d8610f8396b,Stone Brick
+4ff803f6-9526-4b40-bb69-943b7de4dccf,cf71aa35-93d4-47a9-bc77-d3ea2adb564e,Antimatter
+0ad4ebb9-3f1b-473e-95b1-9a82639dad18,cf71aa35-93d4-47a9-bc77-d3ea2adb564e,Silicon Ore
+9ac22396-b0fe-47ab-b8d3-9a85d9c940db,e0eb6f59-64bd-46a7-a0a7-8d8610f8396b,Titanium Crystal
+bc02cb10-0d89-4132-81c2-9afa60911530,a20ad36d-8fdc-4277-b534-c200b38bacfd,Gravity Misslie Set
+8d711e6b-ce59-42a7-9e59-9bee144cbe5f,b0303440-0a91-49b6-9dbf-1d5597bfd196,Plasma Turret
+b9e847b6-9315-41b0-8495-9cec31e5923b,e0eb6f59-64bd-46a7-a0a7-8d8610f8396b,Plastic
+74565519-368f-4ceb-86a2-9dc508f35941,e0eb6f59-64bd-46a7-a0a7-8d8610f8396b,High-Purity Silicon
+c30349c5-ed03-4b87-8bb5-9dd4dc9e8eb1,e0eb6f59-64bd-46a7-a0a7-8d8610f8396b,Particle Container
+a9ab99eb-7162-4f59-9e31-a012c343d121,a20ad36d-8fdc-4277-b534-c200b38bacfd,Antimatter Capsule
+d98aadf9-8500-4f05-b347-a0a7b7860b92,334940a7-5770-400a-8d26-14bacc9ce74a,Destroyer
+5fc9eef9-0e98-4971-bea5-a3c93e1d9edc,a20ad36d-8fdc-4277-b534-c200b38bacfd,Suppressing Capsule
+61883981-e6db-4222-9848-a47e4d8a9a42,e0eb6f59-64bd-46a7-a0a7-8d8610f8396b,Energetic Graphite
+314b6f92-180c-499f-8970-a4e19a60fefd,b1a56ed0-d8b5-4c6b-b4ec-8337cfdb7851,Crystal Explosive Unit
+8b9b4e03-e154-43ac-9594-a6510fc5249c,7df70fc3-6864-41de-85f9-5390fceadae0,EM-Rail Ejector
+97abe518-6c47-420e-8d41-a7bb391b4d6a,0c90e340-e71d-4d53-a291-5d3cc861fb51,Wireless Power Tower
+bcd182d6-9b29-468e-863c-a86260afe024,e0eb6f59-64bd-46a7-a0a7-8d8610f8396b,Iron Ingot
+eae8b14e-a20f-4cab-bdc6-ab372d6918f8,a20ad36d-8fdc-4277-b534-c200b38bacfd,Superalloy Ammo Box
+32861747-4cd2-4d06-89a7-ade8375a9aef,cf71aa35-93d4-47a9-bc77-d3ea2adb564e,Iron Ore
+839cef56-31bd-4ab3-b02f-afde06027fed,0c90e340-e71d-4d53-a291-5d3cc861fb51,Geothermal Power Station
+952919b0-3995-45e6-9f9c-b03a7de2e3b1,78d3f040-df89-4c14-af87-4eee348a1cb8,Re-composing Assembler
+efc24fea-3813-4883-bf93-b0eb85d605bd,e0eb6f59-64bd-46a7-a0a7-8d8610f8396b,Accumulator (Full)
+c6387e20-a924-4c96-88bb-b1d8996019a9,e0eb6f59-64bd-46a7-a0a7-8d8610f8396b,Processor
+fd5c51e2-5009-460c-9e08-b37bd1cc7b34,cf71aa35-93d4-47a9-bc77-d3ea2adb564e,Energy Shard
+6ac376cc-0102-4ad0-bb4b-b9fc521c879b,cf71aa35-93d4-47a9-bc77-d3ea2adb564e,Negentropy Singularity
+d30cdfa8-80aa-4e61-be5a-bb6011d8caaa,b0303440-0a91-49b6-9dbf-1d5597bfd196,SR Plasma Turret
+7d035a72-faac-4c66-b6ab-bc08818c8ebf,6f1e5d6a-7927-4e4f-90bc-46ae6ed36ab1,Information Matrix
+44ff0f52-745a-4a1c-9824-be31e9f65a6f,0c90e340-e71d-4d53-a291-5d3cc861fb51,Satilite Substation
+a16b3403-5e3b-4e69-8c37-bfdfd55d60a1,e163b76e-a9b2-4966-9527-272d9457f898,Splitter
+36a5a6c7-2c0a-4747-a0a0-c1750309d0cb,cf71aa35-93d4-47a9-bc77-d3ea2adb564e,Kimberlite Ore
+7c6d623c-8747-40b5-ba81-c1b9412e1b22,cf71aa35-93d4-47a9-bc77-d3ea2adb564e,Log
+9e03eb7f-b660-48b3-912c-c1b9919d56bf,cf71aa35-93d4-47a9-bc77-d3ea2adb564e,Silicon-based Neuron
+ed903d52-1782-48be-a227-c2be35ec47e2,cf71aa35-93d4-47a9-bc77-d3ea2adb564e,Coal
+d6add6e2-1664-4486-98cf-c37b5299cf17,cdbcfd5e-2ed3-4028-a4b5-5ce1c559e011,Logistics Drone
+e54088f5-bb1f-4f7e-8c9e-c40d9adf0dca,a20ad36d-8fdc-4277-b534-c200b38bacfd,Titanium Ammo Box
+075884f2-cd9c-48f3-9e72-c60b1843af92,cf71aa35-93d4-47a9-bc77-d3ea2adb564e,Core Element
+50a6843c-cec0-4fc8-ba03-c887aa8c5611,cf71aa35-93d4-47a9-bc77-d3ea2adb564e,Stone
+e9e8760d-c84b-45b7-abeb-c98ea5970da8,e163b76e-a9b2-4966-9527-272d9457f898,Pile Sorter
+f6916695-f9de-4c1c-88dd-ca0f636ab0bf,e163b76e-a9b2-4966-9527-272d9457f898,Sorter MK.III
+5b407dea-ff23-47a4-8acf-cae5f2c44b55,e0eb6f59-64bd-46a7-a0a7-8d8610f8396b,Anniliation Constraint Sphere
+53b5f403-7d85-42e0-8eba-cbe2b43192cf,e0eb6f59-64bd-46a7-a0a7-8d8610f8396b,Solar Sail
+62cc02dd-abd9-4df7-9031-ce1c7860e163,e0eb6f59-64bd-46a7-a0a7-8d8610f8396b,Sulfuric Acid
+7035e1b7-7afa-4e3f-9b1d-ce78cd9b3c14,ced2ea2d-7dd4-4c35-9084-1131d8418e5a,Proliferator MK.II
+22035b43-b277-4241-b0a0-cf9253acaa6f,a20ad36d-8fdc-4277-b534-c200b38bacfd,High-Explosive Shell Set
+c036abeb-e29f-4e73-a4cb-cfb4389835b8,cf71aa35-93d4-47a9-bc77-d3ea2adb564e,Dark Fog Matrix
+9d185da9-ddc3-45a2-b31d-d11d97cc121d,6f1e5d6a-7927-4e4f-90bc-46ae6ed36ab1,Electromagnetic Matrix
+7160ba95-8906-489a-91f3-d1f51d6de659,a20ad36d-8fdc-4277-b534-c200b38bacfd,Plasma Capsule
+51329013-3c42-4deb-b702-d35665cc7d94,a20ad36d-8fdc-4277-b534-c200b38bacfd,Crystal Shell Set
+fb59bf6c-d918-4346-8ab2-d619b79e9875,e0eb6f59-64bd-46a7-a0a7-8d8610f8396b,Copper Ingot
+791997a6-a255-48c2-98d0-d627728d1ffd,dbbb2c6e-635d-4bee-9a8a-c81332bac6d6,Space Warper
+1c86c151-6784-4197-94c5-d8daa3c09286,cdbcfd5e-2ed3-4028-a4b5-5ce1c559e011,Logistics Bot
+92ec8d0d-0854-4e68-8717-d8eb4601e382,0c90e340-e71d-4d53-a291-5d3cc861fb51,Wind Turbine
+d9920fd0-e94b-4257-a100-d97b7f058d67,e163b76e-a9b2-4966-9527-272d9457f898,Traffic Monitor
+9d96096e-ffc8-4dbb-8af1-d9e74b492f6b,6f1e5d6a-7927-4e4f-90bc-46ae6ed36ab1,Structure Matrix
+17eda6c7-408e-4172-b075-da49788c9701,e0eb6f59-64bd-46a7-a0a7-8d8610f8396b,Refined Oil
+22cbdcb1-e324-4a3c-8c6e-dbf2f0004e51,cf71aa35-93d4-47a9-bc77-d3ea2adb564e,Critical Photon
+e02bb881-f09a-44cc-bb85-dd0d1fa8334d,e0eb6f59-64bd-46a7-a0a7-8d8610f8396b,Quantum Chip
+84615652-b3f3-4ca4-8bc8-deb40dc99378,e0eb6f59-64bd-46a7-a0a7-8d8610f8396b,Titanium Glass
+5b0dda3f-ae91-41b2-a6b0-def6a6f68ea8,0c90e340-e71d-4d53-a291-5d3cc861fb51,Ray Reciever
+b96c5c4d-241c-41b0-b5e7-e2ba5f16bb8d,dbbb2c6e-635d-4bee-9a8a-c81332bac6d6,Hydrogen Fuel Rod
+8d3d98f4-55bd-4d11-9c7c-e3d16b1ec69e,e0eb6f59-64bd-46a7-a0a7-8d8610f8396b,Small Carrier Rocket
+3f3c2f5d-820a-4d31-9585-e4ffb9212c2b,e0eb6f59-64bd-46a7-a0a7-8d8610f8396b,Plasma Exciter
+c9ed5c3d-3664-4af1-b8dc-e65c304c9c37,b0303440-0a91-49b6-9dbf-1d5597bfd196,Planetary Shield Generator
+194ff4a4-bc86-4a35-978c-e71684f8369d,e0eb6f59-64bd-46a7-a0a7-8d8610f8396b,Glass
+0f57fef6-0d74-40e2-b21d-eaa1e02340a7,40eaf439-f9c7-4aa7-8cf3-1e5f48951f8f,Mining Machine
+b199dd3f-22f4-455c-8927-eaa76c0526ed,e163b76e-a9b2-4966-9527-272d9457f898,Conveyor Belt MK.II
+1f2e2026-880a-407c-9239-ebffe5656b64,334940a7-5770-400a-8d26-14bacc9ce74a,Attack Drone
+2351b5c4-b3db-4940-be94-edd4070e0464,cf71aa35-93d4-47a9-bc77-d3ea2adb564e,Matter Recombiner
+f1451ca1-b1eb-4e0d-8fb3-ee0c818877be,cf71aa35-93d4-47a9-bc77-d3ea2adb564e,Crude Oil
+071cb884-19be-40bd-8e19-efc17ba33da1,e0eb6f59-64bd-46a7-a0a7-8d8610f8396b,Plane Filter
+7841008f-ec48-47db-b94b-f45e9d43bd10,334940a7-5770-400a-8d26-14bacc9ce74a,Prototype
+dfc7f3a1-7b77-461b-b3d9-f60e3b01cbd9,40eaf439-f9c7-4aa7-8cf3-1e5f48951f8f,Advanced Mining Machine
+7d009f53-2839-4161-a47d-fa80465ba7bb,e0eb6f59-64bd-46a7-a0a7-8d8610f8396b,Graphine
+2b5aee1b-932c-4a7f-a5b2-ffb8075af12c,e163b76e-a9b2-4966-9527-272d9457f898,Conveyor Belt MK.III
