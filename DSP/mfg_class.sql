@@ -1,0 +1,4 @@
+CREATE TABLE [dbo].[mfg_class] (
+  [mfg_class_id] UNIQUEIDENTIFIER NOT NULL PRIMARY KEY DEFAULT NEWID(),
+  [name] VARCHAR(250) NOT NULL
+);
