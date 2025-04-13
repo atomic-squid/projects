@@ -19,6 +19,10 @@
     <None Include="Data\recipe.csv" />
     <None Include="Prod.publish.xml" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="dbo" />
+    <Folder Include="dbo\Tables" />
+  </ItemGroup>
   <Target Name="BeforeBuild">
     <Delete Files="$(BaseIntermediateOutputPath)\project.assets.json" />
   </Target>
