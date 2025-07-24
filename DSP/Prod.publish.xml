@@ -2,7 +2,7 @@
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <TargetDatabaseName>DSP</TargetDatabaseName>
-    <TargetConnectionString>Data Source=nas.lan;Initial Catalog=master;User ID=sa;Password=******;Connect Timeout=30;Encrypt=True;Trust Server Certificate=True;Authentication=SqlPassword;Application Name=sqltools;Command Timeout=30</TargetConnectionString>
+    <TargetConnectionString>Data Source=nas.lan;Initial Catalog=DSP;User ID=sa;Password=******;Pooling=False;Connect Timeout=30;Encrypt=True;Trust Server Certificate=True;Authentication=SqlPassword;Application Name=vscode-mssql-GeneralConnection;Command Timeout=30</TargetConnectionString>
     <AllowIncompatiblePlatform>True</AllowIncompatiblePlatform>
     <DropPermissionsNotInSource>True</DropPermissionsNotInSource>
     <DropObjectsNotInSource>True</DropObjectsNotInSource>

@@ -1,5 +1,6 @@
 CREATE TABLE [dbo].[item] (
   [item_id] UNIQUEIDENTIFIER NOT NULL PRIMARY KEY DEFAULT NEWID()
-, [item_class_id] UNIQUEIDENTIFIER FOREIGN KEY REFERENCES item_class (item_class_id)
-, [name] VARCHAR(250)
+, [item_class_id] UNIQUEIDENTIFIER NOT NULL FOREIGN KEY REFERENCES item_class (item_class_id)
+, [name] VARCHAR(250) NOT NULL
+, CONSTRAINT [CNS_ItemName] UNIQUE ([name])
 );
